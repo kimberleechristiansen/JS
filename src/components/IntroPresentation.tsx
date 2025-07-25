@@ -2,12 +2,14 @@ import { useState } from "react";
 import { IntroSlide } from "./IntroSlide";
 import { ProblemSlide } from "./ProblemSlide";
 import { DamageSlide } from "./DamageSlide";
+import { SolutionSlide } from "./SolutionSlide";
+import { HowItWorksSlide } from "./HowItWorksSlide";
 
 export const IntroPresentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
-    if (currentSlide < 2) {
+    if (currentSlide < 4) {
       setCurrentSlide(currentSlide + 1);
     }
   };
@@ -26,6 +28,10 @@ export const IntroPresentation = () => {
         return <ProblemSlide onNext={nextSlide} onPrev={prevSlide} />;
       case 2:
         return <DamageSlide onNext={nextSlide} onPrev={prevSlide} />;
+      case 3:
+        return <SolutionSlide onNext={nextSlide} onPrev={prevSlide} />;
+      case 4:
+        return <HowItWorksSlide onNext={nextSlide} onPrev={prevSlide} />;
       default:
         return <IntroSlide onNext={nextSlide} />;
     }
