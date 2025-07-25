@@ -8,8 +8,37 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Job Scamalyzer Brand Colors */
+    --primary: 218 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 218 91% 45%;
+    --primary-light: 218 91% 75%;
+    
+    /* Background & Surface */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    --surface: 220 14% 96%;
+    --surface-foreground: 222.2 84% 4.9%;
+    
+    /* Warning & Alert Colors */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(218 91% 60%), hsl(218 91% 45%));
+    --gradient-warning: linear-gradient(135deg, hsl(38 92% 50%), hsl(0 84% 60%));
+    --gradient-surface: linear-gradient(180deg, hsl(220 14% 96%), hsl(0 0% 100%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 24px hsl(218 91% 60% / 0.1);
+    --shadow-elevated: 0 8px 32px hsl(218 91% 60% / 0.15);
+    --shadow-floating: 0 12px 48px hsl(218 91% 60% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -56,8 +85,21 @@ All colors MUST be HSL.
   }
 
   .dark {
+    /* Dark mode adjustments */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+    --surface: 222.2 84% 8%;
+    --surface-foreground: 210 40% 98%;
+    
+    /* Keep primary colors consistent */
+    --primary: 218 91% 65%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-dark: 218 91% 50%;
+    --primary-light: 218 91% 80%;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(218 91% 65%), hsl(218 91% 50%));
+    --gradient-surface: linear-gradient(180deg, hsl(222.2 84% 8%), hsl(222.2 84% 4.9%));
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
